@@ -11,7 +11,7 @@ import {
 import { Icon, withBadge } from "react-native-elements";
 import { colors, parameters } from "../global/styles";
 
-const HomeHeader = () => {
+const HomeHeader = ({navigation}) => {
   const BadgeIcon = withBadge(0)(Icon);
 
   return (
@@ -27,6 +27,9 @@ const HomeHeader = () => {
           name="menu"
           color={colors.Cardbackground}
           size={30}
+          onPress={() => {
+            navigation.toggleDrawer();
+          }}
         />
       </View>
 
@@ -34,7 +37,12 @@ const HomeHeader = () => {
         <Text style={styles.title}>SaveFood</Text>
       </View>
 
-      <View style={{ alignItems: "center", justifyContent: "center", paddingRight:15 }}>
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          paddingRight: 15,
+        }}>
         <BadgeIcon
           type="material-community"
           name="cart"

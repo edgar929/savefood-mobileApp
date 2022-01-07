@@ -71,7 +71,7 @@ const SignInScreen = ({navigation}) => {
           titleStyle={parameters.buttonTitle}
           color={colors.buttons}
           onPress={() => {
-            navigation.navigate("Home");
+            navigation.navigate("RootDrawer");
           }}
         />
       </View>
